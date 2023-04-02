@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sunrise hotel </title>
+    <!-- to use the class and id selector we have to erite it in style tag -->
+    <style>
+        /* change the background color to all */
+        body {
+            background-color: rgba(31, 194, 143, 0.5);
+            display: flexbox;
+        }
+        /* select the list inside the unordered list all in one */
+    ul > li 
+    {
+font-family: Lucida Sans;
+    }
+    /* the same as the above select all at once rather than specfying the class many time 
+    in the option list to reduce redundency */
+    select > option {
+        background-color: rgba(42, 234, 234,0.5);
+    }
+    /* apply the attribute to all paragraph class */
+    p  {
+        font-family: Arial, sans-serif;
+       padding-left: 60px;
+    }
+    /* apply to all label tags the following font size  */
+    label {
+    font-size: 35px;
+  }
+  /* apply to all captions at once  */
+ caption {
+    font-family:Trebuchet MS;
+    text-align: center;
+ }
+ /* i used the class called tabel to style my tabel inside the html */
+    .tabel {
+        background-color: antiquewhite;
+        font-family:Verdana, sans-serif;
+        text-align: center;
+        margin-left: 400px;
+        margin-right: 400px;
+    }
+    /* i used to change the layout of the fresh drinks list  */
+  .freshdrinks
+  {
+    content: icon;
+    margin-left:230px;
+  }
+  /* changed the layout of hot drinks using font-family atribute */
+  .hot {
+    font-family: Cambria;
+  }
+  /* i used the display type called grid to list the hot drinks and 
+  fesh drinks in one row  */
+  .sect {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  /* to style our organizations name with style i used the listed attributes using 
+  id selector thats more powerfull than class selector */
+  #sun {
+        font-family: monospace;
+        text-align: center; 
+        font-weight: 200;
+        font-size: 30px;
+        font-display: oblique;
+        background:linear-gradient(to right, red,rgb(0, 0, 0),red);
+        color:rgb(255, 255, 0);
+       height: 50px;
+       padding-top:8px;
+    }
+    /* to allign the text at the center */
+  #option {
+    text-align: center;
+  }
+  /* to style our room selection option with these attriibute */
+  #room {
+    font-family:Franklin Gothic;
+        text-align: center; 
+        font-size: 30px;
+  }
+  /* to remove the underline marker in my links */
+  a{
+    text-decoration: none;
+  }
+  #sub {
+    font-size: 16px;
+    font-family: Arial;
+    border-radius: 5px;
+  }
+  /* to change the size and color of the text when we hover over it */
+  #sub:hover {
+    padding: 4px 4px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(232, 232, 20);
+    transition: all 3s;
+  }
+.ddkl 
+{
+  display: flex;
+  flex-wrap: wrap;
+ -ms-flex-item-align: center;
+  align-items: center;
+  justify-items: center;
+  margin: 40px 40px;
+  grid-area: span;
+}
+.trial {
+  display: grid;
+  grid-gap: 5px;
+}
+#ppl {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: inherit;
+  grid-gap:25px;
+}
+.trial:hover {
+  width: 600px;
+  height: 650px;
+  transition: all 2s;
+}
+</style>
+</head>
+<body>
+    <p id="sun">Sunrise hotel </p>
+    
+     <br> <br>
+    <!-- i give class to make it look easy to read and acces it in the style tag -->
+    <div class="tabel" >
+        <!-- i listed down the hotel menu using tabel tag -->
+        <table border="10px"> 
+           <th>Number &nbsp; &nbsp;  &nbsp; &nbsp;</th>
+           <th>Name of dishes&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  </th>
+           <th>Price in ETB  &nbsp; &nbsp; </th>
+            <tr>
+                <td>1</td>
+                <td>Tbis</td>
+                <td>200 birr</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Frifir</td>
+                <td>80 birr</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Enkulal</td>
+                <td>80 birr</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Pasta</td>
+                <td>60 birr</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Tomato</td>
+                <td>70 bir</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Quanta frfir</td>
+                <td>110 birr</td>
+            </tr>
+            <tr>
+                <td>6</td>
+            <td>Special kikil</td>
+            <td>150 borr</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>normal kikil</td>
+            <td>130 birr</td>
+        </tr>
+        </table>
+    </div>
+    <!-- here are the hotels fresh drinks using unrdered list -->
+    <div class="sect ">
+    <div class="freshdrinks">
+        <ul>
+            <label> Fruit  Drinks </label>
+            <li>Orange</li>
+            <li>Mango</li>
+            <li>Avocado</li>
+            <li>Sprice</li>
+        </ul>
+    </div>
+    <!-- the unordered list for the hot drinks -->
+    <div class="hot">
+        <label>Hot drinks</label>
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Sprice</li>
+        <li>Makiato</li>
+    </div>
+</div>
+<!-- the form for the room selection with given values like type,bed ,floor no -->
+<div id="option">
+  <p  id="room">Room reservation:</p>
+  <select>
+    <option>Type</option>
+     <option>sweet</option>
+     <option>classic</option>
+     <option>moderate</option>
+  </select>
+  <select>
+    <option>Bed no</option>
+     <option>1 Bed</option>
+     <option>2 Bed</option>
+     <option>3 Bed</option>
+  </select>
+  <select>
+    <option>Floor no</option>
+     <option>1<sup>st</sup> &nbsp; floor</option>
+     <option>2<sup>st</sup> &nbsp; floor</option>
+     <option>3<sup>st</sup> &nbsp; floor</option>
+     <option>4<sup>st</sup> &nbsp; floor</option>
+  </select>
+  <br>
+  <br>
+  <input  id="sub" type="button" name="submit" value="submit">
+</div>
+<!-- our social media links to contact us and update  news -->
+<br><br>
+<div class="ddkl" id="ppl">
+  <img class="trial" src="mmn/images (4).jpeg" alt="img" width="500px" height="600px">
+  <img class="trial" src="mmn/images (2).jpeg" alt="img" width="500px" height="600px">
+  <img class="trial" src="mmn/images (3).jpeg" alt="img" width="500px" height="600px">
+  <img class="trial" src="mmn/images (10).jpeg" alt="img" width="500px" height="600px">
+  <img class="trial" src="mmn/istockphoto-870064534-612x612.jpg" alt="img" width="500px" height="600px">
+  <img  class="trial"src="mmn/images (7).jpeg" alt="img" width="500px" height="600px">
+  <img  class="trial"src="IMG_5280.jpg" alt="img" width="500px" height="600px">
+  <img  class="trial"src="untitled-9842-2.0.jpeg" alt="img" width="500px" height="600px">
+  <img  class="trial"src="mmn/images (9).jpeg" alt="img" width="500px" height="600px">
+  <img  class="trial" src="mmn/images (1).jpeg" alt="img" width="500px" height="600px">
+</div>
+<img src="images.png" width="20%" height="200px" > 
+<br> <br>
+<footer>
+    &nbsp;  &nbsp;  &nbsp;
+ <a <img src="mmn/download.jpeg" width="30px" height="30px" href="http://www.telegram.com">Telegram</a>
+ &nbsp;  &nbsp;  &nbsp; 
+ <a href="http://www.twitter.com">Twitter</a>
+ &nbsp;  &nbsp;  &nbsp; 
+ <a href="http://www.sunrise hotel.com/homepage">Home page</a>
+ &nbsp;  &nbsp;  &nbsp; 
+  <a href="http://www.facebook.com/sunrise hotel">Facebook</a> </footer>
+  <br> <br>
+
+</body>
+</html>
+<!-- What is XHTML?
+XHTML stands for EXtensible HyperText Markup Language
+XHTML is a stricter, more XML-based version of HTML
+XHTML is HTML defined as an XML application
+XHTML is supported by all major browsers
+XHTML was developed to make HTML more extensible and flexible to 
+work with other data formats (such as XML).
+ In addition, browsers ignore errors in HTML pages, and try to display 
+ the website even if it has some errors in the markup. So XHTML comes 
+ with a much stricter error handling.
+The Most Important Differences from HTML
+<!DOCTYPE> is mandatory
+The xmlns attribute in <html> is mandatory
+<html>, <head>, <title>, and <body> are mandatory
+Elements must always be properly nested
+Elements must always be closed
+Elements must always be in lowercase
+Attribute names must always be in lowercase
+Attribute values must always be quoted
+Attribute minimization is forbidden
+XHTML Elements Must be Properly Nested
+In XHTML, elements must always be properly nested within each other, like this:
+
+Correct:
+<b><i>Some text</i></b>
+Wrong:
+<b><i>Some text</b></i>
+XHTML Elements Must Always be Closed
+In XHTML, elements must always be closed, like this:
+
+Correct:
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+Wrong:
+<p>This is a paragraph
+<p>This is another paragraph
+  HTML is the predominant mark up language for web pages. HTML creates
+   structured documents by denoting structural semantics for text like
+    headings, lists, links, quotes etc. It allows images and objects to
+     be embedded to create interactive forms. It is written as tags 
+     surrounded by angle brackets - for example, <html>. Scripts in 
+      languages like JavaScript can also be loaded 
+    Features of HTML vs XHTML documents
+HTML documents are composed of elements that have three components- a pair 
+of element tags – start tag, end tag; element attributes given within tags
+ and actual, textual and graphic content. HTML element is everything that
+  lies between and including tags. (Tag is a keyword which is enclosed
+   within angle brackets).
+
+XHTML documents has only one root element. All elements including variables 
+must be in lower case, and values assigned must be surrounded by quotation marks,
+ closed and nested for being recognized. This is a mandatory requirement in XHTML 
+ unlike HTML where it is optional. The declaration of DOCTYPE would determine rules
+  for documents to follow-->
